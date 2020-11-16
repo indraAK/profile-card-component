@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+   --dark-cyan: hsl(185, 75%, 39%);
+   --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+   --dark-grayish-blue: hsl(227, 10%, 46%);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   background-color: var(--dark-cyan);
+   background-image: url(./images/bg-pattern-top.svg),
+      url(./images/bg-pattern-bottom.svg);
+   background-repeat: no-repeat, no-repeat;
+   background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+   font-family: "Kumbh Sans", sans-serif;
+   font-size: 1.6rem;
+   font-weight: 400;
+   min-height: 100vh;
+   display: grid;
+   place-items: center; /* [align-items: center] [justify-items: center] */
+   overflow: hidden;
+}
+
+.profile-card {
+   width: 100%;
+   max-width: 40rem;
+   margin: 0 auto;
+   padding: 0 2rem;
+}
+
+.card {
+   background-color: #fff;
+   border-radius: 1rem;
+   box-shadow: 0 1.5rem 3rem 1rem rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+}
+
+.card-header {
+   width: 100%;
+   min-height: 15rem;
+}
+
+.card-header.bg-card {
+   background-image: url(./images/bg-pattern-card.svg);
+   background-size: cover;
+}
+
+.card-body {
+   padding: 7.5rem 0 3rem;
+   text-align: center;
+   position: relative;
+}
+
+.card-body .profile-img {
+   display: block;
+   width: 10rem;
+   height: 10rem;
+   border-radius: 50%;
+   border: 5px solid #fff;
+   object-fit: cover;
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   -webkit-user-select: none;
+   -moz-user-select: none;
+}
+
+.card-body .name {
+   color: var(--very-dark-desaturated-blue);
+   font-size: 1.8rem;
+   font-weight: 700;
+}
+
+.card-body .age,
+.card-body .city {
+   color: var(--dark-grayish-blue);
+}
+
+.card-body .age {
+   font-weight: 400;
+   vertical-align: middle;
+   margin-left: 0.5rem;
+}
+
+.card-body .city {
+   margin-top: 1.25rem;
+}
+
+.card-footer {
+   border-top: 1px solid #d8d8d8;
+   padding: 2rem 0;
+}
+
+.card-footer .stats {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   text-align: center;
+}
+
+.card-footer .stats h3 {
+   color: var(--very-dark-desaturated-blue);
+   font-size: 1.8rem;
+}
+
+.card-footer .stats p {
+   color: var(--dark-grayish-blue);
+   font-size: 1.2rem;
+   letter-spacing: 1px;
+   margin-top: 0.8rem;
+}
